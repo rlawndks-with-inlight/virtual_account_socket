@@ -36,11 +36,11 @@ io.on('connection', (socket) => {
     socket.on('message', (msg) => {
         console.log(msg)
         const {
-            method, data, brand_id
+            method, data, brand_id, title
         } = msg;
         if (method == 'deposit') {
             io.emit('message', {
-                method, data, brand_id
+                method, data, brand_id, title
             });
         }
     });
