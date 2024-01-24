@@ -10,8 +10,8 @@ const http = require('http');
 
 const PORT = 5000;
 
-const HTTP_PORT = 2000;
-const HTTPS_PORT = 3000;
+const HTTP_PORT = 2222;
+const HTTPS_PORT = 3333;
 
 let server = undefined
 if (process.env.NODE_ENV == 'development') {
