@@ -31,14 +31,10 @@ const io = require('socket.io')(server, {
         methods: ["GET", "POST"],
     }
 });
-
-io.on('connection', (socket) => {
+io.on('connection', async (socket) => {
     console.log('a user connected');
     socket.on('message', (msg) => {
         console.log(msg)
-        const {
-            method, data, brand_id, title
-        } = msg;
         processSocket(msg, io)
     });
 
